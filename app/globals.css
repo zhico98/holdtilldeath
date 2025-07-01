@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "PublicPixel";
+  src: url("/fonts/PublicPixel.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    font-family: "PublicPixel", monospace;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "PublicPixel", monospace;
+  }
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6a6a6a;
+}
